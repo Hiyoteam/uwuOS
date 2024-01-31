@@ -470,7 +470,7 @@ while True:
 					send(f"·\n限制时长：\n每人1分钟\n·\n使用方法：\n报数加入：`1`\n打出卡牌：`u 卡牌`\n跳过出牌：`u .`\n查看卡牌：`|info`")
 
 				else:
-					send(f"·\n机器人：[{botnick}]\n开发者：[paperee]([ee])\n适用地：[HackChat] [ZhangChat]\n·\n使用手册：\n个人数据：`|data`\n打开背包：`|pack 识别码`\n打开商店：`|shop`\n获取权限：`|root`\n查看帮助：`|help 游戏`\n开始游戏：`|play 游戏`\n·\n可选游戏：\n真心话(truth) 生草机(grass) 狼人杀(wolf) UNO(uno)")
+					send(f"·\n机器人：[{botnick}]\n开发者：[paperee]([ee]) [jiangmuran]([jmr])\n适用地：[HackChat] [ZhangChat]\n·\n使用手册：\n个人数据：`|data`\n打开背包：`|pack 识别码`\n打开商店：`|shop`\n获取权限：`|root`\n查看帮助：`|help 游戏`\n开始游戏：`|play 游戏`\n·\n可选游戏：\n真心话(truth) 生草机(grass) 狼人杀(wolf) UNO(uno)")
 
 			elif text[:5]=="|play":
 				slices=text.split()
