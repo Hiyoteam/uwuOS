@@ -13,7 +13,7 @@ chat="chat"
 DHQZ="DHQZ"
 
 # 加入地址&频道
-chatroom=[(hc,yc),(zhc,chat),(zhc,DHQZ)]
+chatroom=[(hc,"114"),(hc,yc),(hc,"114514")]
 
 # bot昵称:uwuOS
 botnick="uwuOS"
@@ -292,8 +292,9 @@ def join(socket,channel):
 		sleep(0.5)
 
 for data_ in chatroom:
-	sleep(5)
+	
 	Thread(target=join,args=data_).start()
+	sleep(60)
 
 while True:
 	if pipe["data"]:
@@ -510,7 +511,7 @@ while True:
 						send(room,f"·\n限制时长：\n每人1分钟\n·\n使用方法：\n报数加入：`1`\n打出卡牌：`u 卡牌`\n跳过出牌：`u .`\n查看卡牌：`|info`")
 
 					else:
-						send(room,f"·\n机器人：[{botnick}]\n开发者：[paperee]([ee])\n适用地：[HackChat] [ZhangChat]\n·\n使用手册：\n个人数据：`|data`\n打开背包：`|pack 识别码`\n打开商店：`|shop`\n获取权限：`|root`\n查看帮助：`|help 游戏`\n开始游戏：`|play 游戏`\n·\n可选游戏：\n真心话(truth) 生草机(grass) 狼人杀(wolf) UNO(uno)")
+						send(room,f"·\n机器人：[{botnick}]\n开发者：[paperee]([ee]) [jiangmuran]([jmr])\n适用地：[HackChat] [ZhangChat]\n·\n使用手册：\n个人数据：`|data`\n打开背包：`|pack 识别码`\n打开商店：`|shop`\n获取权限：`|root`\n查看帮助：`|help 游戏`\n开始游戏：`|play 游戏`\n·\n可选游戏：\n真心话(truth) 生草机(grass) 狼人杀(wolf) UNO(uno)")
 
 				elif text[:5]=="|play":
 					slices=text.split()
@@ -1257,7 +1258,7 @@ while True:
 					elif slices[0] not in notlife[0] or notlife[0][slices[0]][4] or notlife[0][slices[0]][0]!=trip:
 						send(room,f"背包里没有[{slices[0]}]",nick)
 
-					elif slices[1].isnumeric() and 0<=int(slices[1])<=1919810:
+					elif (slices[1].isnumeric() and 0<=int(slices[1])<=1919810) or (trip in root):
 						send(False,f"[{nick}]将[{slices[0]}]上架到了商店\n原价|[{notlife[0][slices[0]][3] or 'Null'}]eb 现价|[{int(slices[1]) or 'Null'}]eb")
 						notlife[0][slices[0]]=[*notlife[0][slices[0]][:3],int(slices[1]),1]
 
@@ -1323,7 +1324,7 @@ while True:
 								send(False,f"投票箱中多了一张{choice(general[4])}的纸片")
 
 							elif uwu in data["state"][False]:
-								send(room,f"你没必要{choice(general[7])}死者",nick)
+								send(room,f"你必要{choice(general[7])}死者",nick)
 
 							else:
 								data["day"]["wait"].pop(data["day"]["wait"].index(nick))
