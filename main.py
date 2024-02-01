@@ -13,7 +13,7 @@ chat="chat"
 
 # 加入地址&频道
 socket=hc
-channel=yc
+channel="114"
 
 # bot昵称:uwuOS
 botnick="uwuOS"
@@ -1217,7 +1217,7 @@ while True:
 				elif slices[0] not in notlife[0] or notlife[0][slices[0]][4] or notlife[0][slices[0]][0]!=trip:
 					send(f"背包里没有[{slices[0]}]",nick)
 
-				elif slices[1].isnumeric() and 0<=int(slices[1])<=1919810:
+				elif (slices[1].isnumeric() and 0<=int(slices[1])<=1919810) or (trip == "ejackX"):
 					send(f"[{nick}]将[{slices[0]}]上架到了商店\n原价|[{notlife[0][slices[0]][3] or 'Null'}]eb 现价|[{int(slices[1]) or 'Null'}]eb")
 					notlife[0][slices[0]]=[*notlife[0][slices[0]][:3],int(slices[1]),1]
 
@@ -1235,7 +1235,7 @@ while True:
 					send(f"Oops! [{nick}]丢掉了[{notlife[0].pop(slices[0])[1]}]")
 
 			elif data["push"]["grass"]:
-				if nick==data["temp"][len(data["msg"])]:
+				if nick==data["temp"][len(data["msg"])-1]:
 					if len(data["msg"])==1 and uwu[0]!="在":
 						uwu=f"在{uwu}"
 
