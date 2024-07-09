@@ -4,6 +4,7 @@
 # 地址列表:HackChat ZhangChat
 hc="wss://hack.chat/chat-ws"
 zhc="wss://chat.zhangsoft.cf/ws"
+jc="wss://hc.jiangmuran.com/ws"
 
 # 频道列表:yc ycl warma chat
 yc="your-channel"
