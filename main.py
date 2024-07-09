@@ -23,7 +23,7 @@ botnick="uwuOS"
 botpass="rv4K/N|dtfD-P\\ud!7:19pw"
 
 # 权限识别码:eYFDHl ejackX uwuu57 POWER+
-root=["eYFDHl","ejackX","uwuu57","POWER+"]
+root=["eYFDHl","ejackX","Admin","uwuu57","POWER+"]
 
 # 三字母颜文字:uwu uvu
 emote=["uwu","uvu"]
@@ -265,7 +265,7 @@ try:
 	print(f"{socket}/{channel}\n")
 
 	sleep(0.5)
-	ws.send(dumps({"cmd":"join","channel":channel,"nick":botname,"password":botpass,"client":"papereescomputer","murmur":"/bi5lWkmPbUMF96kWJXoBsIU9opk36B2zK6xUtg87cWJavnaxRrKMhxwzVf6eAxG"}))
+	ws.send(dumps({"cmd":"join","channel":channel,"nick":botname,"password":botpass,"client":"uwuComputer","murmur":"/bi5lWkmPbUMF96kWJXoBsIU9opk36B2zK6xUtg87cWJavnaxRrKMhxwzVf6eAxG"}))
 
 except:
 	rb()
@@ -841,7 +841,7 @@ while True:
 						# 主循环
 						def loop():
 							temp=data["temp"]
-							list_=["人物","地点/时间","事件","续写"]
+							list_=["人物(不要写jmr)","地点/时间","事件","续写"]
 
 							for uwu in range(len(temp)):
 								sleep(1)
@@ -854,8 +854,8 @@ while True:
 
 								for _ in range(60 if uwu<3 else 120):
 									sleep(1)
-
-									if uwu!=len(data["msg"]):
+									# bug
+									if uwu==len(data["msg"]):
 										break
 
 								else:
