@@ -13,7 +13,7 @@ warma="kt1j8rpc"
 chat="chat"
 
 # 加入地址&频道
-socket=hc
+socket=jc
 channel="114"
 
 # bot昵称:uwuOS
